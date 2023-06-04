@@ -47,7 +47,7 @@ SECRET_KEY = 'django-insecure-u)zc^0z7$05*^9d6@6&c7asf5*)_af*r4#(8=*f!5^86r@-pqd
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-CSRF_TRUSTED_ORIGINS = ['https://port-0-django-dcse2bliafmvmr.sel4.cloudtype.app/']
+CSRF_TRUSTED_ORIGINS = ['https://port-0-django-dcse2bliafmvmr.sel4.cloudtype.app']
 
 
 # Application definition
