@@ -47,6 +47,7 @@ SECRET_KEY = 'django-insecure-u)zc^0z7$05*^9d6@6&c7asf5*)_af*r4#(8=*f!5^86r@-pqd
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
+CSRF_TRUSTED_ORIGINS = ['https://port-0-django-dcse2bliafmvmr.sel4.cloudtype.app/']
 
 
 # Application definition
@@ -63,11 +64,11 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    #'django.middleware.security.SecurityMiddleware',
+    'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    #'django.middleware.csrf.CsrfViewMiddleware',
-    #'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
@@ -153,3 +154,6 @@ LOGIN_REDIRECT_URL = '/'
 
 # 로그아웃시 이동하는 URL
 LOGOUT_REDIRECT_URL = '/'
+
+
+
