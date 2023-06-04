@@ -35,8 +35,6 @@ SECRET_KEY = env('SECRET_KEY')
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 
-
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
@@ -61,7 +59,32 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'django_extensions',
+
+    # Bulma CSS Framework
+    'bulma',
+
+    # Allauth를 위한 Apps
+    'django.contrib.sites',
+
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.naver'
 ]
+
+AUTHENTICATION_BACKENDS = (
+    # allauth 와 상관없이 username 으로 장고 어드민에 로그인이 필요할때
+    'django.contrib.auth.backends.ModelBackend',
+
+    # 'allauth' 특화 인증 방법, e-mail로 로그인 하는것 같은것
+    'allauth.account.auth_backends.AuthenticationBackend',
+)
+
+SITE_ID = 1
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmaailBackend'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

@@ -21,6 +21,7 @@ from pybo import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('pybo.urls')),
+    path('accounts/', include('allauth.urls')),
     path('common/', include('common.urls')),
     path('', views.index, name='index'),  # '/' 에 해당되는 path
 ]
