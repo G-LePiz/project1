@@ -21,3 +21,4 @@ class AnswerForm(forms.ModelForm):
         labels = {
             'content': '답변내용',
         }
+
