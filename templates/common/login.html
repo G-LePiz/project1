@@ -8,17 +8,19 @@
         <input type="hidden" name="next" value="{{ next }}">  <!-- 로그인 성공후 이동되는 URL -->
         {% include "form_errors.html" %}
         <div class="mb-3">
-            <label for="username">사용자ID</label>
+            <label for="username">ID</label>
             <input type="text" class="form-control" name="username" id="username"
                    value="{{ form.username.value|default_if_none:'' }}">
         </div>
         <div class="mb-3">
-            <label for="password">비밀번호</label>
+            <label for="password">Password</label>
             <input type="password" class="form-control" name="password" id="password"
                    value="{{ form.password.value|default_if_none:'' }}">
         </div>
         <button type="submit" class="btn btn-primary">로그인</button>
         <a href="{% provider_login_url 'naver' %}"><img src="{% static 'btnD_login.png' %}" height="38"></img></a>
+        <a href="{% provider_login_url 'kakao' %}"><img src="{% static 'kakao_login.png' %}" height="38"></img></a>
+
     </form>
 </div>
 {% endblock %}
