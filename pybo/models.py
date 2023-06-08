@@ -6,6 +6,7 @@ from django.db import models
 
 
 
+
 class Question(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='author_question')
     subject = models.CharField(max_length=200)
@@ -33,4 +34,10 @@ class Answer(models.Model):
     create_date = models.DateTimeField()
     modify_date = models.DateTimeField(null=True, blank=True)
     voter = models.ManyToManyField(User, related_name='voter_answer')
+
+# create your models here.
+class Bookmark(models.Model):
+    site_name = models.CharField(max_length=100)
+    url = models.URLField('Site URL')
+
 

@@ -73,7 +73,8 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'allauth.socialaccount.providers.naver',
     'allauth.socialaccount.providers.kakao',
-    'hitcount'
+    'hitcount',
+    'bookmark',
 
 ]
 
